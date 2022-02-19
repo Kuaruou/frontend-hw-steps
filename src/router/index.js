@@ -1,20 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
+import Checkout from "..//views/Checkout/Main.vue";
+import MyData from "../views/Checkout/MyData.vue";
+import Payment from "../views/Checkout/Payment.vue";
+import OrderConfirmation from "../views/Checkout/OrderConfirmation.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    redirect: '/checkout/step-1-my-data'
   },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  { path: "/checkout",
+    redirect: "/checkout/step-1-my-data",
+    name: "Checkout",
+    component: Checkout,
+    children: [
+      { path: "step-1-my-data", component: MyData },
+      { path: "step-2-payment", component: Payment },
+      { path: "step-3-order-confirmation", component: OrderConfirmation },
+    ],
   },
 ];
 

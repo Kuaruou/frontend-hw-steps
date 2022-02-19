@@ -1,0 +1,39 @@
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.step {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.step-head {
+  color: white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 1px solid lightblue;
+  background-color: #1aa0e2;
+  margin: auto;
+
+  .step-number, .step-check {
+    margin-top: 7px;
+  }
+}
+
+.step-done .step-head {
+  background-color: #60a917;
+}
+
+.step-name {
+  margin-top: 10px;
+}
+
+.dotted-line {
+  border-bottom: 5px dotted darkblue;
+  width: 100px;
+  transform: translateY(-50%);
+  stroke-dasharray: 1;
+}
