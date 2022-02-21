@@ -1,20 +1,23 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
-  state () {
+  state() {
     return {
-      lang: 'en'
-    }
+      lang: "en",
+      orderTitle: "",
+      orderInfo: "",
+    };
   },
   getters: {
-    currentLang: state => {
-      return state.lang
-    }
+
   },
   mutations: {
-    updateLang (state, value) {
-      state.lang = value
-      console.log('newlang', state.lang)
-    }
-  }
-})
+    updateLang(state, value) {
+      state.lang = value;
+    },
+    completeOrder(state, orderData) {
+      state.orderTitle = orderData.title;
+      state.orderInfo = orderData.info;
+    },
+  },
+});

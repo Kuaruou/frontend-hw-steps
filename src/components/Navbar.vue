@@ -1,20 +1,20 @@
 <template>
-  <div class="nav">
-    <div class="nav-item">
+  <div class="nav" data-test="navbar">
+    <div class="nav-item" data-test="nav-item">
       <a>
         <i class="fa-regular fa-circle-question"></i>
         HELP
       </a>
     </div>
-    <div class="nav-item">
+    <div class="nav-item" data-test="nav-item">
       <a>
         <i class="fa-regular fa-circle-user"></i>
         SIGN IN
       </a>
     </div>
-    <div class="nav-item">
+    <div class="nav-item" data-test="nav-item">
       <i class="fa-regular fa-flag"></i>
-      <select name="" v-model="lang">
+      <select name="" v-model="lang" data-test="lang-select">
         <option value="en">EN</option>
         <option value="zh_CN">CN</option>
       </select>
@@ -27,13 +27,13 @@ export default {
   name: "Navbar",
   computed: {
     lang: {
-      get () {
-        return this.$store.state.lang
+      get() {
+        return this.$store.state.lang;
       },
-      set (value) {
-        this.$store.commit('updateLang', value)
-      }
-    }
+      set(value) {
+        this.$store.commit("updateLang", value);
+      },
+    },
   },
 };
 </script>
@@ -44,6 +44,9 @@ export default {
   justify-content: flex-end;
   padding-top: 20px;
   margin-right: 10px;
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
 }
 
 .nav-item {

@@ -2,34 +2,32 @@
   <div class="steps">
     <div class="step">
       <div v-if="step1Done" class="step-done">
-        <div class="step-head">
-          <div class="step-check">
+        <div class="step-head" data-test="step-head">
+          <div class="step-check" data-test="step-check">
             <i class="fa-solid fa-check"></i>
           </div>
         </div>
       </div>
-      <div v-else class="step-head">
-        <div class="step-number">
-          1
-        </div>
+      <div v-else class="step-head" data-test="step-head">
+        <div class="step-number">1</div>
       </div>
       <div class="step-name">
         {{ step1 }}
       </div>
     </div>
-    <div class="dotted-line"></div>
+    <div class="dotted-line">
+      ......................
+    </div>
     <div class="step">
-      <div v-if="step2Done" class="step-done">
+      <div v-if="step2Done" class="step-done" data-test="step-head">
         <div class="step-head">
-          <div class="step-check">
+          <div class="step-check" data-test="step-check">
             <i class="fa-solid fa-check"></i>
           </div>
         </div>
       </div>
-      <div v-else class="step-head">
-        <div class="step-number">
-          2
-        </div>
+      <div v-else class="step-head" data-test="step-head">
+        <div class="step-number">2</div>
       </div>
       <div class="step-name">
         {{ step2 }}
@@ -41,8 +39,7 @@
 <script>
 export default {
   name: "Steps",
-  components: {
-  },
+  components: {},
   props: {
     step1Done: Boolean,
     step2Done: Boolean,

@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Checkout from "..//views/Checkout/Main.vue";
-import MyData from "../views/Checkout/MyData.vue";
-import Payment from "../views/Checkout/Payment.vue";
-import OrderConfirmation from "../views/Checkout/OrderConfirmation.vue";
+import Checkout from "../views/checkout/Main.vue";
+import MyData from "../views/checkout/MyData.vue";
+import Payment from "../views/checkout/Payment.vue";
+import OrderConfirmation from "../views/checkout/OrderConfirmation.vue";
 
 const routes = [
   {
     path: "/",
-    redirect: '/checkout/step-1-my-data'
+    redirect: "/checkout/step-1-my-data",
   },
-  { path: "/checkout",
+  {
+    path: "/checkout",
     redirect: "/checkout/step-1-my-data",
     name: "Checkout",
     component: Checkout,
