@@ -40,12 +40,12 @@
         </div>
         <div class="form-buttons">
           <div class="form-button" data-test="form-button">
-            <button type="button">
               <router-link to="/checkout/step-1-my-data">
-                <i class="fas fa-angle-left"></i>
-                Back
+                <button type="button">
+                  <i class="fas fa-angle-left"></i>
+                  Back
+                </button>
               </router-link>
-            </button>
           </div>
           <div class="form-button" data-test="form-button">
             <button type="submit">
