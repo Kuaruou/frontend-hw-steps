@@ -6,7 +6,7 @@ import OrderConfirmation from "../views/checkout/OrderConfirmation.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/:catchAll(.*)",
     redirect: "/checkout/step-1-my-data",
   },
   {
